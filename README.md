@@ -1,13 +1,7 @@
-# Hapi Boilerplate
 
-> Getting started with ES2017 and Hapi
+Event Sign in api
 
-[![Build Status](https://travis-ci.org/TylerGarlick/hapi-boilerplate.svg?branch=master)](https://travis-ci.org/TylerGarlick/hapi-boilerplate)
-
-## Usage
-
-```bash
-$ git clone https://github.com/TylerGarlick/hapi-boilerplate [name of project]
-```
-
-Loads all the plugins that I use on a frequent basis.
+This api is allowing company's that host large events to be able to track and record who attended the event. It going to search an already existing database by for the attendies
+name and company name. If the attendie is already in the database it will mark if that person attended the event. If the attendie is not in the database it will add them and also
+mark them as have attended the event. This api will also connect to a label maker (type of label maker has not been determined yet) to print off a name tag with the attendies name, company name,
+and other information (not determined yet).
