@@ -1,8 +1,10 @@
 import { Server } from 'hapi';
-
+import walkInAttendie from './plugins/walk-in-attendie';
+import rsvpAttendie from './plugins/rsvp-attendie';
 const server = new Server();
 
 const port = process.env.PORT || 4000;
+const env = process.env.NODE_ENV || 'development';
 
 server.connection({
   port, router: {
@@ -45,7 +47,7 @@ server.register([
     register: require('hapi-swagger'),
     options: {
       cors: true,
-      jsonEditor: true,
+      jsonEditor: false,
       documentationPath: '/',
       info: {
         title: 'Example',
@@ -53,7 +55,9 @@ server.register([
         description: 'An example api'
       }
     }
-  }
+  },
+  walkInAttendie,
+  rsvpAttendie
 ], err => {
   if (err) throw err;
 
