@@ -1,6 +1,7 @@
 import { Server } from 'hapi';
 import walkInAttendie from './plugins/walk-in-attendie';
 import rsvpAttendie from './plugins/rsvp-attendie';
+
 const server = new Server();
 
 const port = process.env.PORT || 4000;
@@ -57,7 +58,8 @@ server.register([
     }
   },
   walkInAttendie,
-  rsvpAttendie
+  rsvpAttendie,
+
 ], err => {
   if (err) throw err;
 

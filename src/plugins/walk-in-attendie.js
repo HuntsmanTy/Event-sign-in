@@ -25,7 +25,7 @@ server.route({
             let markedAttended = true;
             const result = await attendies.insertOne({firstName,lastName,email,companyName, markedAttended});
             if(result.insertedCount === 1){
-                return reply(result, {message: 'Attendie has been added'}).status(201)
+                return reply( {message: 'Attendie has been added'}).status(201)
             }
             return await reply(Boom.badImplementation('An error occured'));
         }

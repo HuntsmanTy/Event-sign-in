@@ -1,6 +1,6 @@
 dist
 .vscode
-.envFile
+.env
 # Logs
 logs
 *.log
